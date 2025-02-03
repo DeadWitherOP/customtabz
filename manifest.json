@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "CustomTabz",
+  "version": "1.0",
+  "description": "New Tabs are boring, custom new tabs are better",
+  "chrome_url_overrides": {
+    "newtab": "new_page.html"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "icons": {
+    "16": "iconS.png",
+    "48": "iconS.png",
+    "128": "iconS.png"
+  }
+}

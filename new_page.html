@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>One tab to rule them all...</title>
+  <link rel="icon" type="image/x-icon" href="icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches:wght@400;700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url('sauron.jpg') center center fixed;
+      background-size: cover;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      position: relative;
+      font-family: 'Barlow', sans-serif;
+    }
+
+    .sidebar {
+      background-color: rgba(94, 75, 0, 0.45);
+      height: 100vh;
+      width: 100px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      padding: 20px 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .clock {
+      color: #f2a20c;
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 40px;
+    }
+
+    .side_button {
+      width: 60px;
+      height: 60px;
+      background-color: rgba(31,31,31,0.5);
+      color: #f2a20c;
+      font-size: 14px;
+      border-radius: 10px;
+      border: 2px solid #f2a20c;
+      margin: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+    }
+
+    .side_button:hover {
+      background-color: red;
+      color: #1f1f1f;
+    }
+
+    .main-content {
+      display: flex;
+      justify-content: flex-end;
+      width: 100%;
+      padding-right: 50px;
+    }
+
+    .container {
+      background-color: rgba(0, 0, 0, 0.05);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: right;
+    }
+
+    h1 {
+      font-size: 50px;
+      color:rgba(245, 136, 12,1);
+      margin-top: 0;
+		 font-family: 'Staatliches', sans-serif;
+    }
+    ::placeholder {
+		 color:rgba(245, 136, 12,1);
+	 }
+    .search-bar {
+      margin-top: 20px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    .search-bar form {
+      display: flex;
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .search-bar input[type="text"] {
+      flex: 1;
+      padding: 10px;
+      font-size: 18px;
+      border-radius: 5px;
+      border: 1px solid rgba(245, 136, 12,1);
+       background-color: rgba(31,31,31,0.8); /* Pure white background */
+      outline: none;
+      text-align: left;
+      /* Prevent autocomplete suggestions */
+      autocomplete: off;
+	  caret-color: red;
+		color:rgba(245, 136, 12,1);
+    }
+    .txt{
+		 color:#a10b00;
+    }
+    .search-bar input[type="submit"] {
+      display: none;
+    }
+	@keyframes pulsate {
+  0% {
+	  border: 2px solid #f2a20c;
+    background-color: #fc9803;
+  }
+	50% {
+		border: 2px solid #f2a20c;
+    background-color: #f2a20c;
+  }
+  100% {
+	  border: 2px solid #f2a20c;
+    background-color: #fc9803;
+  }
+}
+
+.side_button:hover {
+  animation: pulsate 1.5s infinite; /* Controls duration and infinite looping */
+  color: #1f1f1f;
+}
+  </style>
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="clock" id="clock"></div>
+	  <p class="txt">----------------</p>
+    <div class="side_button" id="button1">Class</div>
+    <div class="side_button" id="button2">Slides</div>
+    <div class="side_button" id="button3">Docs</div>
+    <div class="side_button" id="button4">Drive</div>
+    <div class="side_button" id="button5">Mail</div>
+  </div>
+
+  <div class="main-content">
+    <div class="container">
+      <h1>One tab to rule them all.</h1>
+      <div class="search-bar">
+        <form action="https://www.google.com/search" method="get">
+          <input type="text" name="q" placeholder="Darkness..." required autocomplete="off">
+        </form>
+      </div>
+    </div> 
+  </div>
+
+  <script src="script.js">
+  </script>
+</body>
+</html>
